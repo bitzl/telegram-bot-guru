@@ -21,7 +21,7 @@ def recommend_music(bot, update):
 def guess_what_the_user_wants_to_know(bot, update):
     tags_of_interest = [tag for tag in FACTS.get_tags() if tag in update.message.text]
     fact = random.choice(FACTS.with_tags(tags_of_interest))
-    message = f'''Well, for the path of your enlightment, you have to look at:
+    message = f'''Well, for the path of your enlightenment, you have to look at:
     
     {fact.info}
     '''
