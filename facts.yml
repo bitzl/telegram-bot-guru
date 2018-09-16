@@ -1,16 +1,17 @@
+---
 - info: >
     True Survivor by David Hasselhoff from the Kung Fury soundtrack:
 
     https://www.youtube.com/watch?v=ZTidn2dBYbY
 
   tags: [cool]
-  type: [music, video]
+  types: [music, video]
 
 - info: >
     The antarctic is cool!
 
   tags: [cool]
-  type: [text]
+  types: [text]
 
 - info: >
     Burger Man from ZZ Top
@@ -18,7 +19,7 @@
     https://www.youtube.com/watch?v=XJP8wVoTufg
 
   tags: [cool]
-  type: [music, video]
+  types: [music, video]
 
 - info: >
     Cheap Sunglasses from ZZ Top
@@ -26,4 +27,4 @@
     https://www.youtube.com/watch?v=QePcj9BplMQ
 
   tags: [cool]
-  type: [music, video]
+  types: [music, video]
