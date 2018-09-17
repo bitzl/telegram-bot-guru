@@ -17,3 +17,8 @@ def test_facts_get_tags():
         Fact('first', ['a'], []),
     ])
     assert facts.get_tags() == {'a', 'b', 'c'}
+
+
+def test_facts_is_empty():
+    facts = Facts([])
+    assert facts.is_empty()

@@ -1,3 +1,4 @@
+import random
 from dataclasses import dataclass
 from itertools import chain
 
@@ -26,13 +27,19 @@ class Facts:
         return Facts(load_facts(facts_path))
 
     def with_tags(self, tags):
-        return Facts(fact for fact in self.facts if all(tag in fact.tags for tag in tags))
+        return Facts([fact for fact in self.facts if all(tag in fact.tags for tag in tags)])
 
     def with_types(self, types):
-        return Facts(fact for fact in self.facts if all(t in fact.types for t in types))
+        return Facts([fact for fact in self.facts if all(t in fact.types for t in types)])
 
     def get_types(self):
         return set(chain.from_iterable(fact.types for fact in self.facts))
 
     def get_tags(self):
         return set(chain.from_iterable(fact.tags for fact in self.facts))
+
+    def is_empty(self):
+        return len(self.facts) == 0
+
+    def random(self):
+        return random.choice(self.facts)
